@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap");
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue: hsl(217, 54%, 11%);
+  --Very-dark-blue2: hsl(216, 50%, 16%);
+  --Very-dark-blue3: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  background-color: var(--Very-dark-blue2);
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.card .image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 25px);
+  width: 100%;
+  background-color: var(--Cyan);
+  border-radius: 10px;
+  opacity: 0.3;
+  display: none;
+}
+.card .image .img-bg {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.card .image .img-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.card .image:hover .img-hover,
+.card .image:hover::before {
+  display: block;
+}
+
+.card .content h3 {
+  color: var(--White);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card .content h3:hover {
+  color: var(--Cyan);
+}
+.card .content p {
+  color: var(--Soft-blue);
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.card .price {
+  border-bottom: 1px solid var(--Very-dark-blue3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .price span {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.card .price span.eth {
+  color: var(--Cyan);
+}
+.card .price span.eth img {
+  margin-right: 10px;
+}
+.card .price span.day {
+  color: var(--Soft-blue);
+}
+
+.card .price span.day img {
+  margin-right: 10px;
+}
+
+.card .footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.card .footer .avatar {
+  margin-right: 15px;
+}
+.card .footer .avatar img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--White);
+  border-radius: 50%;
+}
+.card .footer .name {
+  color: var(--Soft-blue);
+}
+.card .footer span {
+  color: var(--White);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card .footer span:hover {
+  color: var(--Cyan);
+}
+
+.attribution {
+  color: var(--White);
+}
