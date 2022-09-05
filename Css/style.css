@@ -68,12 +68,12 @@ body {
   display: block;
 }
 
-.card .content h3 {
+.card .content h1 {
   color: var(--White);
   cursor: pointer;
   transition: 0.3s;
 }
-.card .content h3:hover {
+.card .content h1:hover {
   color: var(--Cyan);
 }
 .card .content p {
